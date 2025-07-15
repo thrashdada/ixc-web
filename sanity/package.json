@@ -1,0 +1,16 @@
+{
+  "name": "incoxchange-studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "dependencies": {
+    "@sanity/cli": "^3.96.0",
+    "@sanity/vision": "^3.96.0",
+    "sanity": "^3.96.0"
+  }
+} 

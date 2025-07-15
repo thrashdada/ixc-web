@@ -5,9 +5,10 @@ import { schemaTypes } from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'incoXchange',
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
+  title: 'incoXchange Studio',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'c10s91qu',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  basePath: '/studio',
   plugins: [structureTool(), visionTool()],
   schema: {
     types: schemaTypes,

@@ -1,4 +1,6 @@
 import { createClient } from '@sanity/client'
+import imageUrlBuilder from '@sanity/image-url'
+import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
@@ -35,4 +37,11 @@ export async function getPage(slug: string) {
 // Helper function to get a single blog post
 export async function getBlogPost(slug: string) {
   return await client.fetch(`*[_type == "blogPost" && slug.current == $slug][0]`, { slug })
+}
+
+// Image URL builder for Sanity images
+const builder = imageUrlBuilder(client)
+
+export function urlForImage(source: SanityImageSource) {
+  return builder.image(source)
 } 

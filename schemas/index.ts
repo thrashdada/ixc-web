@@ -1,13 +1,9 @@
-import { hero } from './hero'
-import { page } from './page'
-import { service } from './service'
-import { testimonial } from './testimonial'
 import { blogPost } from './blogPost'
+import { category } from './category'
+import { author } from './author'
 
 export const schemaTypes = [
-  hero,
-  page,
-  service,
-  testimonial,
-  blogPost
+  blogPost,
+  category,
+  author
 ] 
